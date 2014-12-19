@@ -1,0 +1,14 @@
+DADACONF 0: FREEZING SNOWDEN
+=====================================
+
+how to get AWS keys
+follow directions in template and ask captain cloud
+
+build dev w/
+grunt dev 
+
+build prod w/
+grunt
+
+deploy w/
+grunt deploy

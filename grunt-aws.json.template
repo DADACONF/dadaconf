@@ -1,0 +1,7 @@
+// To deploy using the grunt-s3 uploader create a copy of this file under the name grunt-aws.json
+// Replace the key, secret, and bucket with the corresponding values from AWS. 
+{
+  "key" : "null",
+  "secret" : "null"
+  "bucket" : "bigdada.co" 
+}
