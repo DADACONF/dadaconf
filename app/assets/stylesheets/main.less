@@ -1,16 +1,19 @@
 
+@import "../../../bower_components/bootstrap/less/bootstrap.less";
+/** Define all bootstrap overrides in the follwowing files. Do not touch bootstrap source. **/
+@import "custom-variables.less";
+
 html, body {
 	height: 100%;
 }
 
 .site-wrapper {
 	height: 100%;
-	/* background: repeating-linear-gradient(to top, #696969 20%, #420420, #696969);*/
 }
 
 .container, .row {
 	height: 100%;
-	border: 1px solid black;
+	border: 1px solid @gray-darker;
 }
 
 
