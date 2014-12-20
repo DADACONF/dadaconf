@@ -7,9 +7,46 @@ html, body {
 	height: 100%;
 }
 
+h1 {
+  font-size: 48px;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: 128px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: 72px;
+  }
+}
+
 .canvas-container {
-  img.content-hero {
+}
+
+.hero-credits {
+  font-size: 24px;
+  
+  @media (min-width: @screen-sm-min) {
+    font-size: 36px;
+  }
+}
+
+.hero-container {
+  position: relative;
+
+  .hero-img {
     width: 100%;
+  }
+
+  .hero-overlay {
+    top: 30px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+
   }
 }
 
