@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       prod: {
-        src: ['build/js/main.js'],
+        src: ['app/assets/js/main.js'],
         dest: 'build/js/main.js'
       }
     },
@@ -53,7 +53,6 @@ module.exports = function(grunt) {
       prod: {
         files: [    
           {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
-          {expand: true, src: "app/assets/js/*.js", dest: "build/js/", flatten: true},    
           {expand: true, src: "app/assets/images/faces/*.jpg", dest: "build/images/faces", flatten: true},            
           {expand: true, src: "app/assets/sprites/*.png", dest: "build/sprites/", flatten: true},                
           {expand: true, src: "bower_components/bootstrap/dist/js/bootstrap.min.js", dest: "build/js/libs", flatten: true},
