@@ -11,7 +11,6 @@
   }
 
   var setFaces = function(){
-    console.log("hello");
     var face1 = $("#about-0");
     var face2 = $("#about-1");
     face1.attr("src", randomUIFace());

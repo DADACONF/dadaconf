@@ -109,8 +109,16 @@ module.exports = function(grunt) {
             dest: 'sprites/'
           },
           {
+            src: 'build/images/faces/*',
+            dest: 'images/faces'
+          },
+          {
             src: 'build/js/libs/*.min.js',
             dest: 'js/libs/'
+          },
+          {
+            src: 'build/js/libs/firebase.js',
+            dest: 'js/libs/firebase.js'
           },
           {
             src: 'build/stylesheets/*',
