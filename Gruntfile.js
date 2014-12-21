@@ -47,6 +47,7 @@ module.exports = function(grunt) {
           {expand: true, src: "app/assets/sprites/*.png", dest: "build/sprites/", flatten: true},          
           {expand: true, src: "bower_components/bootstrap/dist/js/bootstrap.js", dest: "build/js/libs", flatten: true},
           {expand: true, src: "bower_components/jquery/dist/jquery.js", dest: "build/js/libs", flatten: true},
+          {expand: true, src: "bower_components/firebase/firebase.js", dest: "build/js/libs", flatten: true}
         ]
       },
       prod: {
@@ -57,6 +58,7 @@ module.exports = function(grunt) {
           {expand: true, src: "app/assets/sprites/*.png", dest: "build/sprites/", flatten: true},                
           {expand: true, src: "bower_components/bootstrap/dist/js/bootstrap.min.js", dest: "build/js/libs", flatten: true},
           {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true},
+          {expand: true, src: "bower_components/firebase/firebase.js", dest: "build/js/libs", flatten: true}
         ]
       }
     },
