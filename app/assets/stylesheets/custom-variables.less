@@ -10,8 +10,44 @@
 
 /** BOOTSTRAP OVERRIDES **/
 @body-bg: @gray-darker;
+@btn-bg: @gray-darker;
 @text-color: @blue-lighter;
+
+/** Text size overrides **/
 @font-family-base: 'Righteous', Arial;
+@font-size-base:          16px;
+@font-size-h1:            floor((@font-size-base * 5.5)); 
+@font-size-h2:            floor((@font-size-base * 3.2)); 
+@font-size-h3:            ceil((@font-size-base * 2.7)); 
+@font-size-h4:            ceil((@font-size-base * 1.7)); 
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); 
+/** new base variables **/
+@font-size-larger:         ceil((@font-size-base * 1.7)); 
+
+
+
+
+h1 {
+
+  @media (max-width: @screen-sm-min) {
+  	/*font-size: 48px;*/
+  }
+}
+
+h2 {
+  @media (max-width: @screen-sm-min) {
+ 
+  }
+}
+
+h3 {
+  /*font-size: 72px;*/
+  @media (max-width: @screen-sm-min) {
+   
+  }
+}
+
 
 /* BREAKPOINTS */
 @phone-breakpoint: 667px;

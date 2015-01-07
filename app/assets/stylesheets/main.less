@@ -7,22 +7,6 @@ html, body {
 	height: 100%;
 }
 
-h1 {
-  font-size: 48px;
-
-  @media (min-width: @screen-sm-min) {
-    font-size: 128px;
-  }
-}
-
-h3 {
-  font-size: 32px;
-
-  @media (min-width: @screen-sm-min) {
-    font-size: 72px;
-  }
-}
-
 #about {
 	.about-item {
 		margin: 8px 0 8px 0;
@@ -30,10 +14,10 @@ h3 {
 }
 
 .hero-credits {
-  font-size: 24px;
+  font-size: @font-size-larger;
   
   @media (min-width: @screen-sm-min) {
-    font-size: 36px;
+    font-size: @font-size-large;
   }
 }
 
@@ -49,8 +33,11 @@ h3 {
     width: 100%;
     position: absolute;
     text-align: center;
-
   }
+}
+
+h1, h2, h3 {
+  text-shadow: 0px 0px 35px red;
 }
 
 .site-wrapper {
@@ -60,4 +47,8 @@ h3 {
 .container, .row {
 	height: 100%;
 	border: 1px dashed @gray-darker;
+}
+
+#mc_embed_signup {
+  clear:left; 
 }
