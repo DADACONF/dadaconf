@@ -92,7 +92,9 @@ module.exports = function(grunt) {
         key: '<%= aws.key %>',
         secret: '<%= aws.secret %>',
         bucket: '<%= aws.bucket %>',
-        access: 'private'
+        access: 'private',
+        gzip: true,
+        gzipExclude: ['.jpg', '.jpeg', '.png']
       },
       prod: {
         upload: [
