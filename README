@@ -12,3 +12,6 @@ grunt
 
 deploy w/
 grunt deploy
+
+run a webserver for testing locally w/
+grunt http-server:dev

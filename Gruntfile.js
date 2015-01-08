@@ -129,6 +129,20 @@ module.exports = function(grunt) {
         ]
       }
     },
+    'http-server': {
+      dev: {
+        // the server root directory
+        root: "build/",
+        port: 8282, 
+        host: "127.0.0.1",
+
+        cache: 500,
+        showDir : true,
+        autoIndex: true,
+        ext: "html",
+        runInBackground: false
+      }
+    },
     watch: {
       coffee: {
         files: ['app/assets/coffee/*.coffee', 'app/assets/stylesheets/*.less', 'app/assets/js/*.js', 'app/views/*.html'],
@@ -146,6 +160,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-http-server');
 
   // Default task(s).
   grunt.registerTask('default', 'Building a production build', 
