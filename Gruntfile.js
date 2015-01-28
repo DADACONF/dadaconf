@@ -64,13 +64,14 @@ module.exports = function(grunt) {
     processhtml: {
       prod: {
         files: {
-          'build/index.html': ['app/views/index.html']
+          'build/index.html': ['app/views/index.html'],
+          'build/howto.html': ['app/views/howto.html']
         }
       }
     }, 
     replace: {
       prod: {
-        src: ["build/index.html"],
+        src: ["build/index.html", "build/howto.html"],
         overwrite: true,
         replacements: [
           { from: "stylesheets/main.css",
@@ -139,7 +140,7 @@ module.exports = function(grunt) {
         cache: 500,
         showDir : true,
         autoIndex: true,
-        ext: "html",
+        ext: ["html", "js"],
         runInBackground: false
       }
     },
