@@ -65,13 +65,14 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'build/index.html': ['app/views/index.html'],
-          'build/howto.html': ['app/views/howto.html']
+          'build/howto.html': ['app/views/howto.html'],
+          'build/codeofconduct.html': ['app/views/codeofconduct.html']
         }
       }
     }, 
     replace: {
       prod: {
-        src: ["build/index.html", "build/howto.html"],
+        src: ["build/index.html", "build/howto.html", "build/codeofconduct.html"],
         overwrite: true,
         replacements: [
           { from: "stylesheets/main.css",
