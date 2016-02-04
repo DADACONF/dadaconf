@@ -43,46 +43,33 @@ module.exports = function(grunt) {
         files: [
           {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
           {expand: true, src: "app/assets/js/*.js", dest: "build/js/", flatten: true},          
-          {expand: true, src: "app/assets/images/faces/*.jpg", dest: "build/images/faces", flatten: true},          
-          {expand: true, src: "app/assets/sprites/*.png", dest: "build/sprites/", flatten: true},          
-          {expand: true, src: "bower_components/bootstrap/dist/js/bootstrap.js", dest: "build/js/libs", flatten: true},
-          {expand: true, src: "bower_components/jquery/dist/jquery.js", dest: "build/js/libs", flatten: true},
-          {expand: true, src: "bower_components/firebase/firebase.js", dest: "build/js/libs", flatten: true}
+          {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
         ]
       },
       prod: {
         files: [    
           {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
-          {expand: true, src: "app/assets/images/faces/*.jpg", dest: "build/images/faces", flatten: true},            
-          {expand: true, src: "app/assets/sprites/*.png", dest: "build/sprites/", flatten: true},                
-          {expand: true, src: "bower_components/bootstrap/dist/js/bootstrap.min.js", dest: "build/js/libs", flatten: true},
-          {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true},
-          {expand: true, src: "bower_components/firebase/firebase.js", dest: "build/js/libs", flatten: true}
+          {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
         ]
       }
     },
     processhtml: {
       prod: {
         files: {
-          'build/index.html': ['app/views/index.html'],
-          'build/howto.html': ['app/views/howto.html'],
-          'build/codeofconduct.html': ['app/views/codeofconduct.html']
+          'build/index.html': ['app/views/index.html']
         }
       }
     }, 
     replace: {
       prod: {
-        src: ["build/index.html", "build/howto.html", "build/codeofconduct.html"],
+        src: ["build/index.html"],
         overwrite: true,
         replacements: [
           { from: "stylesheets/main.css",
             to: "stylesheets/main.min.css"
           },
-          { from: "js/libs/jquery.js",
-            to: "js/libs/jquery.min.js"
-          },
-          { from: "js/libs/bootstrap.js",
-            to: "js/libs/bootstrap.min.js"
+          { from: "js/libs/main.js",
+            to: "js/libs/main.min.js"
           }
         ]
       }
@@ -109,20 +96,8 @@ module.exports = function(grunt) {
             dest: 'js/'
           },
           {
-            src: 'build/sprites/*.png',
-            dest: 'sprites/'
-          },
-          {
-            src: 'build/images/faces/*',
-            dest: 'images/faces'
-          },
-          {
             src: 'build/js/libs/*.min.js',
             dest: 'js/libs/'
-          },
-          {
-            src: 'build/js/libs/firebase.js',
-            dest: 'js/libs/firebase.js'
           },
           {
             src: 'build/stylesheets/*',
@@ -147,7 +122,7 @@ module.exports = function(grunt) {
     },
     watch: {
       coffee: {
-        files: ['app/assets/coffee/*.coffee', 'app/assets/stylesheets/*.less', 'app/assets/js/*.js', 'app/views/*.html'],
+        files: ['app/assets/stylesheets/*.less', 'app/assets/js/*.js', 'app/views/*.html'],
         tasks: ['dev']    
       }
     }
@@ -175,7 +150,8 @@ module.exports = function(grunt) {
      'replace:prod']);
 
   grunt.registerTask('dev', 'Generating a development build', 
-    ['less:dev',
+    ['clean',
+     'less:dev',
      'copy:dev']);
 
   grunt.registerTask('deploy', 'Uploading to S3',

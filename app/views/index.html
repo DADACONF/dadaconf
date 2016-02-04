@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>DADACONF</title>
     <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" media="screen" href="stylesheets/main.min.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/main.css">
     <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -21,7 +21,6 @@
     ga('create', 'UA-58316441-1', 'auto');
     ga('send', 'pageview');
     </script>
-    <script src="js/libs/firebase.js" type="text/javascript"></script>
     <script src="js/libs/jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -33,160 +32,8 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=137222446375584&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="site-wrapper">
-      <div class="container-fluid">
-        <div id="header" class="row">
-          <div class="col-sm-12 col-md-8 col-md-offset-2 canvas-container">
-            <marquee behavior="alternate" scrollamount="10" class="hero-credits">
-              <a href="http://www.bigdada.co">BIG DADA</a> && <a href="http://www.letsgetweird.club">LET'S GET WEIRD CLUB</a> present
-            </marquee> 
-            <div class="hero-container">
-              <img class="hero-img" src="http://38.media.tumblr.com/tumblr_lynjmvFqmz1qa68j2o1_r2_500.gif">
-              <div class="hero-overlay">
-                <h1>DADACONF 0</h1>
-                <h2 class="date">3/20/2015-3/22/2015</h2>
-                <h2 class="location">SARATOGA SPRINGS, CALIFORNIA</h2>
-                <h2>DADACONF IS REAL</h2>
-                <a class="btn btn-default" href="https://squareup.com/market/dadaconf" role="button">
-                  REGISTER FOR DADACONF HERE
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div id="description" class="row">
-          <div class="col-sm-12 col-md-8 col-md-offset-2">
-            <p>
-              Dadaconf celebrates Big Dada, an art movement playing on two concepts: 1) the original Dada of the 1920s and 2) the buzzwordy and absurd tech industry that is an increasing presence in everyone's life.
-            </p>
-            <p>
-              Big Dada is about creating experiences that explore technology and creativity. It's about subverting tech's obsession with consumption and making fast money and instead focusing on creating and doing.
-            </p>
-            <p>
-              Anyone and everyone can and should make art. Whether you are an artist, musician, engineer, or anything else, you can come make something fun, strange, and absurd as part of Big Dada.
-            </p>
-            <h2>DADACONF IS HAPPENING</h2>
-            <p>
-              If you are one of the lucky 60 people who have registered for DADACONF, you should have gotten a bunch of cryptic emails in your inbox by now. If you haven't please reach out to Siegfried at sbilstein at gmail.com before friday. 
-            </p>
-            <p>Read the <a href="codeofconduct.html">code of conduct</a>. Check your email. See you this weekend!</p>
-            <h3>Important DADACONF links:</h3>
-            <p>
-            <ul>
-              <li><a href="codeofconduct.html">DADACONF Code of Conduct:</a> Don't be an awful person and make DADACONF awesome for people of all kinds!</li>
-              <li><a href="https://github.com/dadaconf">DADACONF Github</a></li>
-              <li><a href="https://twitter.com/dadaconf">DADACONF Twitter</a></li>
-            </ul>
-            <p>
-              The rest of you...stand by. We'll be releasing videos after dadaconf along with a bunch of cool stuff that happened.
-            </p>
-            </p>
-            <h3> What's going to happen at Dadaconf? </h3>
-            <p>
-              <a href="howto.html">Read the HOWTO DADA guide here</a>
-            </p>
-            <p>
-              The goal of Dadaconf is to brings lots of people together to create things at the intersection of art, tech, and music. We're making the Big Dada. 
-            </p>
-            <p>
-              Dadaconf is a very freeform event: the main events are the Friday night opening ceremony and the Saturday night exhibition and party. Saturday evening people will have an opportunity to exhibit and demonstrate their creative projects. We'll also have performances and end the event with a big party.  
-            </p>
-            <p>
-              The rest of the weekend is dedicated to giving people time to work on creative projects in preparation for Saturday night. There will be opportunities to meet others and collaborate. In the future, we'll be setting up a way for you to get in touch with other attendees prior to the event in case you want to organize beforehand. 
-            </p>   
-            <p>
-              In addition to giving time and space to projects, we'll also be offering various workshops, lessons, and events to learn and explore cool creative tech. Some of these workshops we've got planned so far:
-            </p>
-            <ul>
-              <li>
-                Improvisational and generative music.
-              </li>
-              <li>
-                Art supplies and art stations.
-              </li>
-              <li>
-              Generative graphics (think visual art that uses computers and math to do cool stuff)
-              </li> 
-              <li>
-                Exploring using the Kinect to make cool shit. 
-              </li>
-              <li>
-                Read more about the kind of events we're hosting at Dadaconf <a href="howto.html">here</a>
-              </li>
-            </ul>    
-            <h3>
-              Sounds awesome, how do I sign up? 
-            </h3>
-            <p>
-              We've reached our funding treshold on tilt and now have tickets available for purchase on our Square store <a href="https://squareup.com/market/dadaconf">here</a>
-            </p>
-            <h3>What's the cost breakdown?</h3>
-            <p>
-              The cost the resort charges per guest is $97/night, which is all inclusive. We need 50 people minimum to reserve the whole resort for the weekend. Therefore, we need to raise $9,700 to make this happen. Here's the breakdown of the per guest cost:
-              Here's the breakdown of the per guest cost:<br>
-              $62 / night: lodging (a bed indoors)<br>
-              $35 / night: food (brunch and dinner)<br>
-              $97 / night * (2 nights) = <strong>$194</strong><br><br>
-              As such, we've set the minimum contribution on the Tilt as $194, which is equal to our costs for the venue. With that said, we'll also need money for art supplies, hardware, and other assorted stuff to make this thing really cool. If you can kick in an extra $10-20, that'd be awesome. We'll also be fundraising via merch and other stuff to make this a truly awesome experience for everyone.
-            </p>
-            <p>
-              If you have any questions, please reach out <a href="sbilstein@gmail.com">Siggy</a> or Joey and we'd be happy to answer any questions. We're really looking forward to getting weird in the woods with all of you.
-            </p>
-            <a class="btn btn-default" href="https://squareup.com/market/dadaconf" role="button">REGISTER FOR DADACONF</a>
-          </div>
-        </div>    
-        <div id="about" class="row">
-          <div class="col-sm-12 col-md-8 col-md-offset-2 canvas-container">
-            <h3>About Us</h3>
-            <div class="about-item clearfix">
-              <div class="col-sm-2">
-                <img id="about-0" alt="..." class="img-circle"/>
-              </div>
-              <div class="col-sm-10">
-                <p>
-                  Captain Cloud (<a href="https://twitter.com/sbilstein">Siggy</a>) has symbolically linked his heart to the pulse of a Russian botnet. With every breath his computers reach out into the dark and transmit pharmaceutical marketing messages to excited customers around the world.
-               </p>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="col-sm-2">
-                <img id="about-1" alt="..." class="img-circle"/>
-              </div>
-              <div class="col-sm-10">  
-                <p>KanYang (<a href="https://twitter.com/KanYang">Joey</a>) is known for developing the first virtual reality LeanSip experience in conjunction with several high profile Houston technologists/screwheads. He's the boss of most bosses.</p>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <div class="row" class="footer">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h4>Find Us On Social Media</h4>
-            <div class="col-sm-4">
-              <a class="twitter-follow-button"
-                href="https://twitter.com/dadaconf"
-                data-show-count="false"
-                data-lang="en">
-              Follow @dadaconf
-              </a>
-            </div>
-            <div class="col-sm-4">  
-              <script type="text/javascript">
-              window.twttr = (function (d, s, id) {
-                var t, js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src= "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-                return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-              }(document, "script", "twitter-wjs"));
-              </script>
-              <div class="fb-like" data-href="https://www.facebook.com/dadaconf" data-layout="standard" data-action="like" data-width="280" data-show-faces="true" colorscheme="dark" data-share="true"></div>
-            </div>
-          </div>  
-        </div>
-       </div> 
+      <h1>DADACONF 0.1 THO</h1>
     </div>  
-    <script src="js/libs/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

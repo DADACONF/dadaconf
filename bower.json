@@ -1,7 +1,7 @@
 {
-  "name": "pickle",
+  "name": "dadaconf",
   "version": "0.0.0",
-  "homepage": "https://github.com/sbilstein/pickle",
+  "homepage": "https://github.com/sbilstein/dadaconf",
   "authors": [
     "Siegfried Bilstein <sbilstein@gmail.com>"
   ],
@@ -14,9 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.1.1",
-    "jquery": "~2.1.1",
-    "firebase": "2.0.6"
+    "jquery": "~2.1.1"
   },
   "description": "big dada"
 }
