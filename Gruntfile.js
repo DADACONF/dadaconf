@@ -43,12 +43,14 @@ module.exports = function(grunt) {
         files: [
           {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
           {expand: true, src: "app/assets/js/*.js", dest: "build/js/", flatten: true},          
+          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true},          
           {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
         ]
       },
       prod: {
         files: [    
           {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
+          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true},          
           {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
         ]
       }
@@ -122,7 +124,7 @@ module.exports = function(grunt) {
     },
     watch: {
       coffee: {
-        files: ['app/assets/stylesheets/*.less', 'app/assets/js/*.js', 'app/views/*.html'],
+        files: ['app/assets/stylesheets/*', 'app/assets/js/*.js', 'app/views/*.html'],
         tasks: ['dev']    
       }
     }

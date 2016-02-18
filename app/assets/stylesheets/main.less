@@ -1,6 +1,37 @@
 @import (inline) "normalize.css";
 @import (inline) "skeleton.css";
 
+/* Colors */
+@color-primary-0: #4A92E2;  /* Main Primary color */
+@color-primary-1: #9EC7F4;
+@color-primary-2: #6FAAEB;
+@color-primary-3: #287AD7;
+@color-primary-4: #0B64C7;
+
+@color-secondary-1-0: #FFD545;  /* Main Secondary color (1) */
+@color-secondary-1-1: #FFE99D;
+@color-secondary-1-2: #FFDE6D;
+@color-secondary-1-3: #FFCC1D;
+@color-secondary-1-4: #FFC600;
+
+@color-secondary-2-0: #FF8645;  /* Main Secondary color (2) */
+@color-secondary-2-1: #FFBF9D;
+@color-secondary-2-2: #FFA06D;
+@color-secondary-2-3: #FF6C1D;
+@color-secondary-2-4: #FF5900;
+
+@color-complement-0: #FFB645; /* Main Complement color */
+@color-complement-1: #FFD99D;
+@color-complement-2: #FFC56D;
+@color-complement-3: #FFA61D;
+@color-complement-4: #FF9A00;
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Futura";
+}
+
 h1 {
   span.serious {
     font-family: "Inconsolata XL", monospace;    
@@ -9,6 +40,56 @@ h1 {
     font-family: "comic sans ms", sans-serif;    
   }
 }
+
+/* Body Elements */
+body {
+  background-color: #ffffff;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.nav {
+  list-style-type: none;
+  // margin: 0;
+  padding: 0;
+
+  .button {
+    margin-top: 8px;
+  }
+
+  li {
+    display: inline;
+    float:left;
+    text-transform: uppercase;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+}
+
+.footer {
+  ul {
+    list-style-type: none;
+    padding:0;
+    li {
+      display: inline;
+    }
+  }
+}
+
+.hero-text {
+  background-color: @color-secondary-2-0;
+  padding: 15px;
+}
+
 .center-tile {
   margin-top: 20%;
 }
@@ -17,7 +98,7 @@ h1 {
 }
 
 .button-homepage-cta {
-  margin-left: -20px;
+  // margin-left: -20px;
 }
 
 .fb-like {
@@ -28,4 +109,38 @@ h1 {
   width: 180px;
   margin: 0 auto;
 }
-// Custom DADACONF code lives here...
+
+.horizontal-button {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .hero-image {
+    min-width: 90%;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
