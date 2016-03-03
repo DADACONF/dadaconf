@@ -58,13 +58,15 @@ module.exports = function(grunt) {
     processhtml: {
       prod: {
         files: {
-          'build/index.html': ['app/views/index.html']
+          'build/index.html': ['app/views/index.html'],
+          'build/opensource.html': ['app/views/codeofconduct.html'],
+          'build/codeofconduct.html': ['app/views/opensource.html']
         }
       }
     }, 
     replace: {
       prod: {
-        src: ["build/index.html"],
+        src: ["build/*.html"],
         overwrite: true,
         replacements: [
           { from: "stylesheets/main.css",
