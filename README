@@ -1,11 +1,15 @@
-DADACONF 0: FREEZING SNOWDEN
+#DADACONF 0.1
 =====================================
+
+the website for dadaconf.com
+
+we have bad habits
 
 how to get AWS keys
 follow directions in template and ask captain cloud
 
 build dev w/
-grunt dev 
+grunt dev
 
 build prod w/
 grunt
@@ -14,4 +18,4 @@ deploy w/
 grunt deploy
 
 run a webserver for testing locally w/
-grunt http-server:dev
+grunt http-server
