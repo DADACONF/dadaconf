@@ -59,8 +59,8 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'build/index.html': ['app/views/index.html'],
-          'build/opensource.html': ['app/views/codeofconduct.html'],
-          'build/codeofconduct.html': ['app/views/opensource.html']
+          'build/codeofconduct.html': ['app/views/codeofconduct.html'],
+          'build/opensource.html': ['app/views/opensource.html']
         }
       }
     }, 
