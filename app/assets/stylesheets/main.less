@@ -28,8 +28,13 @@
 
 /* Typography */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Futura";
+h1.art-deco {
+  font-family: 'Poiret One', cursive;
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
 }
 
 h1 {
@@ -51,6 +56,8 @@ body {
 }
 
 .nav {
+  font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+  font-weight: 500;
   list-style-type: none;
   // margin: 0;
   padding: 0;
@@ -61,6 +68,8 @@ body {
 
   li {
     display: inline;
+    width: 20%;
+    margin: 0;
     float:left;
     text-transform: uppercase;
   }
@@ -79,9 +88,22 @@ body {
   ul {
     list-style-type: none;
     padding:0;
+
     li {
       display: inline;
     }
+  }
+}
+
+.container-wrapper {
+  background-color: @color-secondary-2-0;
+}
+
+.content-home {
+  background-color: #ffffff;
+  .row {
+    padding: 0 10px 0 10px;
+    text-align: justify;
   }
 }
 
@@ -97,10 +119,6 @@ body {
   text-align: center;
 }
 
-.button-homepage-cta {
-  // margin-left: -20px;
-}
-
 .fb-like {
   top: -7px;
 }
@@ -113,6 +131,11 @@ body {
 .horizontal-button {
   display: inline-block;
   margin-left: 20px;
+}
+
+.hero-cta {
+  margin: 0 auto;
+  width: 50%;
 }
 
 .hero-image {
