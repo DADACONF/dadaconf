@@ -1,5 +1,6 @@
 @import (inline) "normalize.css";
 @import (inline) "skeleton.css";
+@import "buttons";
 @import "colors";
 
 
@@ -64,13 +65,32 @@ body {
 
 }
 
+.homepage-final-cta {
+  background-color: lighten(@color-secondary-2-0, 10%);
+
+  section {
+    padding: 20px;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .button-container {
+    display: block;
+    width: 390px;
+    margin: 0 auto;
+  }
+}
+
 .footer {
-  ul {
+
+  .fine-print {
     list-style-type: none;
     padding:0;
 
     li {
-      display: inline;
+      font-size: 12px;
     }
   }
 }
@@ -81,20 +101,34 @@ body {
 
 .content-home {
   background-color: #ffffff;
+
   .row {
     padding: 0 10px 0 10px;
-    text-align: justify;
   }
 
   section {
-    margin: 20px 100px;
-    /* smaller than tablet */
+    margin: 20px 100px 50px;
+
     @media (max-width: 750px) {
       margin: 20px 10px;
     }
 
     p {
       margin-bottom: 10px;
+    }
+  }
+}
+
+.trailer-embed {
+  text-align: center;
+
+  iframe {
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+
+    @media (max-width: 750px) {
+      width: 100%;
     }
   }
 }
