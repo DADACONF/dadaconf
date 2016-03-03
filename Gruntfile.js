@@ -106,6 +106,10 @@ module.exports = function(grunt) {
           {
             src: 'build/stylesheets/*',
             dest: 'stylesheets/'
+          },
+          {
+            src: 'build/images/*',
+            dest: 'images/'
           }
         ]
       }
