@@ -59,6 +59,7 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'build/index.html': ['app/views/index.html'],
+          'build/info.html': ['app/views/info.html'],
           'build/codeofconduct.html': ['app/views/codeofconduct.html'],
           'build/opensource.html': ['app/views/opensource.html'],
           'build/workshops.html': ['app/views/workshops.html']
