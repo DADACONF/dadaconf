@@ -3,8 +3,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       prod: {
-        src: ['app/assets/js/main.js'],
-        dest: 'build/js/main.js'
+        src: ['app/assets/js/*.min.js', 'app/assets/js/main-compressed.js'],
+        dest: 'build/js/main.min.js'
       }
     },
     uglify: {
@@ -12,8 +12,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       prod: {
-        src: ['build/js/main.js'],
-        dest: 'build/js/main.min.js',
+        src: ['app/assets/js/main.js'],
+        dest: 'app/assets/js/main-compressed.js',
         compress: true
       }
     },
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         files: {
           "build/stylesheets/main.min.css" : "app/assets/stylesheets/main.less"
         },
-        compress: true, 
+        compress: true,
         cleancss: true,
         strictimports: true,
       }
@@ -41,17 +41,16 @@ module.exports = function(grunt) {
     copy: {
       dev: {
         files: [
-          {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
-          {expand: true, src: "app/assets/js/*.js", dest: "build/js/", flatten: true},          
-          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true},          
+          {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},
+          {expand: true, src: "app/assets/js/*.js", dest: "build/js/", flatten: true},
+          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true},
           {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
         ]
       },
       prod: {
-        files: [    
-          {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},  
-          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true},          
-          {expand: true, src: "bower_components/jquery/dist/jquery.min.js", dest: "build/js/libs", flatten: true}
+        files: [
+          {expand: true, src: "app/views/**", dest: "build/", flatten: true, filter: "isFile"},
+          {expand: true, src: "app/assets/images/*", dest: "build/images/", flatten: true}
         ]
       }
     },
@@ -65,7 +64,7 @@ module.exports = function(grunt) {
           'build/workshops.html': ['app/views/workshops.html']
         }
       }
-    }, 
+    },
     replace: {
       prod: {
         src: ["build/*.html"],
@@ -74,8 +73,8 @@ module.exports = function(grunt) {
           { from: "stylesheets/main.css",
             to: "stylesheets/main.min.css"
           },
-          { from: "js/libs/main.js",
-            to: "js/libs/main.min.js"
+          { from: "js/main.js",
+            to: "js/main.min.js"
           }
         ]
       }
@@ -120,7 +119,7 @@ module.exports = function(grunt) {
       dev: {
         // the server root directory
         root: "build/",
-        port: 8282, 
+        port: 8282,
         host: "127.0.0.1",
 
         cache: 500,
@@ -133,7 +132,7 @@ module.exports = function(grunt) {
     watch: {
       coffee: {
         files: ['app/assets/stylesheets/*', 'app/assets/js/*.js', 'app/views/*.html'],
-        tasks: ['dev']    
+        tasks: ['dev']
       }
     }
   });
@@ -150,16 +149,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-http-server');
 
   // Default task(s).
-  grunt.registerTask('default', 'Building a production build', 
+  grunt.registerTask('default', 'Building a production build',
     ['clean',
+     'uglify:prod',
      'concat:prod',
-     'uglify:prod', 
-     'less:prod', 
+     'less:prod',
      'copy:prod',
-     'processhtml:prod', 
+     'processhtml:prod',
      'replace:prod']);
 
-  grunt.registerTask('dev', 'Generating a development build', 
+  grunt.registerTask('dev', 'Generating a development build',
     ['clean',
      'less:dev',
      'copy:dev']);
