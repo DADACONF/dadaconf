@@ -20,18 +20,19 @@
     light.position.set(100,250,100);
     scene.add(light);
 
-    var geometry = new THREE.BoxBufferGeometry( 150, 150, 150 );
-    var texture = new THREE.TextureLoader().load( 'images/promo_pictures_sprite.png' );
-    var material = new THREE.MeshBasicMaterial( { map: texture } );
-
-
     var runnerTexture = new THREE.TextureLoader().load( 'images/promo_pictures_sprite.jpg' );
     annie = new TextureAnimator(runnerTexture, 22, 1, 22, 666); // texture, #horiz, #vert, #total, duration.
     var runnerMaterial = new THREE.MeshBasicMaterial( { map: runnerTexture, side:THREE.FrontSide } );
+    var cubeLength;
+    if($(document).width() > $(document.length)) {
+      cubeLength = $(document).width() / 15.0;
+    } else {
+      cubeLength = $(document).height() / 10.0;
+    }
+    var runnerGeometry = new THREE.BoxBufferGeometry(cubeLength, cubeLength, cubeLength);
 
-    var runnerGeometry = new THREE.BoxBufferGeometry(150,150,150);
     cube = new THREE.Mesh(runnerGeometry, runnerMaterial);
-    cube.position.set(0, 70, 150);
+    cube.position.set(0, 50, 150);
     scene.add(cube);
 
     var skyBoxGeometry = new THREE.BoxBufferGeometry( 600, 600, 600);
@@ -52,7 +53,8 @@
   function onWindowResize() {
     var height = monolith.height();
     camera.aspect = monolith.width() / height;
-    camera.updateProjectionMatrix();
+    camera.updateProjectionMatrix(monolith.width() / 2.0);
+    // cube.scale.set();
     renderer.setSize(monolith.width(), height);
   }
 
@@ -65,18 +67,12 @@
     renderer.render( scene, camera );
   }
 
-  function onMouseClick(event) {
-
-    rotateX = 50 * Math.exp(0.5 * event.pageX - monolith.offset().left, 2);
-    rotateY = 50 * Math.exp(0.5 * event.pageY - monolith.offset().top, 2);
-  }
 
   $(document).ready(function(){
     monolith = $(MONOLITH_ID);
     init();
     animate();
     onWindowResize();
-    monolith.click(onMouseClick);
   });
 
 
