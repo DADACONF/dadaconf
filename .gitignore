@@ -19,3 +19,4 @@ dist
 /RUNNING_PID
 /.settings
 .DS_Store
+app/assets/js/main-compressed.js
